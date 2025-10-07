@@ -21,7 +21,7 @@
       background-repeat: no-repeat;
     }
 
-    .btn {
+    .boton {
       display: inline-block;
       padding: 10px 16px;
       border-radius: 6px;
@@ -31,7 +31,7 @@
     }
 
     .btn-primary {
-      background: #007bff;
+      background: white;
       color: white;
     }
 
@@ -50,16 +50,7 @@
       flex-direction: column;
       align-items: center;
       gap: 15px;
-      color: white;
-      text-shadow:
-                -2px -2px 0 #000,
-                2px -2px 0 #000,
-                -2px 2px 0 #000,
-                2px 2px 0 #000,
-                -3px 0px 0 #000,
-                3px 0px 0 #000,
-                0px -3px 0 #000,
-                0px 3px 0 #000;
+      color: black;
     }
     </style>
 </head>
@@ -68,16 +59,21 @@
     <div class="texto">
       <h1>Calculadora Logica</h1>
       <br>
-      <h2>Seleccione una opción:</h2>
-      <div>
-        <form action="registroC.php" method="get" style="display:inline;">
-          <button type="submit" class="btn btn-primary">Registros Clientes</button>
-        </form>
-        <form action="registroH.php" method="get" style="display:inline;">
-          <button type="submit" class="btn btn-primary">Registros Médicos</button>
-        </form>
-      </div>
+      <h2>Por favor rellene todos los campos</h2>
+      <form action="script.php" method="get" style="display:inline;">
+        <h2>Nombre</h2>
+        <input type="text" id="nombre" name="nombre" required> 
+        <h2>Edad</h2>
+        <input type="number" id="edad" name="edad" min="1" required>
+        <h2>Numero 1</h2>
+        <input type="number" id="numero1" name="numero1" required>
+        <h2>Numero 2</h2>
+        <input type="number" id="numero2" name="numero2" required>
+        <br><br>
+        <button type="submit" class="boton btn-primary">Calcular</button>
+      </form>
     </div>
   </div>
+
 </body>
 </html>
